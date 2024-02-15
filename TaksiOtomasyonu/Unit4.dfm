@@ -1,0 +1,61 @@
+object DataModule4: TDataModule4
+  Height = 480
+  Width = 640
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 96
+    Top = 104
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Us' +
+      'ers\Cado\Desktop\TaksiOtomasyonu\Database12.mdb;Mode=Share Deny ' +
+      'None;Persist Security Info=False;Jet OLEDB:System database="";Je' +
+      't OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLED' +
+      'B:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Glob' +
+      'al Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet O' +
+      'LEDB:New Database Password="";Jet OLEDB:Create System Database=F' +
+      'alse;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don'#39't Copy Local' +
+      'e on Compact=False;Jet OLEDB:Compact Without Replica Repair=Fals' +
+      'e;Jet OLEDB:SFP=False'
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 96
+    Top = 40
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Kay'#305't'
+    Left = 96
+    Top = 168
+  end
+  object ADOTable2: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Taksiler'
+    Left = 200
+    Top = 168
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOTable2
+    Left = 192
+    Top = 104
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOTable3
+    Left = 312
+    Top = 104
+  end
+  object ADOTable3: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Taksiciler'
+    Left = 312
+    Top = 176
+  end
+end

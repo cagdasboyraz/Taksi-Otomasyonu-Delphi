@@ -1,0 +1,31 @@
+object DataModule4: TDataModule4
+  Height = 480
+  Width = 640
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=Datab' +
+      'ase12.mdb;Mode=Share Deny None;Persist Security Info=False;Jet O' +
+      'LEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Dat' +
+      'abase Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Loc' +
+      'king Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global' +
+      ' Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLED' +
+      'B:Create System Database=False;Jet OLEDB:Encrypt Database=False;' +
+      'Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact W' +
+      'ithout Replica Repair=False;Jet OLEDB:SFP=False'
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 80
+    Top = 40
+  end
+  object ADOTable1: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Taksiler'
+    Left = 80
+    Top = 112
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 80
+    Top = 184
+  end
+end

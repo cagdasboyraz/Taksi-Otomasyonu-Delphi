@@ -1,0 +1,63 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Data.Win.ADODB, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TForm3 = class(TForm)
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    DBEdit3: TDBEdit;
+    DBEdit4: TDBEdit;
+    DBEdit5: TDBEdit;
+    DBImage1: TDBImage;
+    Label6: TLabel;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    DBCheckBox1: TDBCheckBox;
+    SpeedButton4: TSpeedButton;
+    DBNavigator1: TDBNavigator;
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+uses unit4, unit5;
+
+procedure TForm3.SpeedButton1Click(Sender: TObject);
+begin
+Form3.Hide;
+Form5.show;
+end;
+
+procedure TForm3.SpeedButton2Click(Sender: TObject);
+begin
+Form3.Close;
+end;
+
+procedure TForm3.SpeedButton4Click(Sender: TObject);
+begin
+          ShowMessage('Taksiciniz Seçilmiþtir Lütfen Araç Seçiniz')
+end;
+
+end.
